@@ -1,0 +1,5 @@
+name: Your New Jekyll Site
+lsi: false
+source: .
+markdown: redcarpet
+pygments: true
