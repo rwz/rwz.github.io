@@ -1,13 +1,10 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
 <div class="post">
-{{ content }}
+  <h1>{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  {{ content }}
 </div>
-
-<div id="_kmts">
-<script async="async" src="//komments.net/embed/7cf91119-c1dc-4647-b1e2-acf8680a9680"></script>
-</div>
+<div id="_kmts"><script async="async" src="//komments.net/embed/7cf91119-c1dc-4647-b1e2-acf8680a9680"></script></div>

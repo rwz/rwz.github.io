@@ -1,5 +1,11 @@
-name: I dee dead ppl
-lsi: false
-source: .
-markdown: redcarpet
-pygments: true
+title:        '@rwz'
+tagline:      'Pavel Pravosud'
+description:  'Hey. My name is Pavel and I rant about things here.'
+url:          https://rwz.github.io
+author:
+  name:       'Pavel Pravosud'
+  email:      'pavel@pravosud.com'
+markdown:     rdiscount
+permalink:    pretty
+pygments:     true
+paginate:     1
