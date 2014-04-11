@@ -233,6 +233,14 @@ a:focus {
 }
 
 /* Masthead content */
+.masthead .userpic {
+  border-radius: 100%;
+  max-width: 150px;
+  max-height: 150px;
+  float: left;
+  margin: 15px;
+}
+
 .masthead h1 {
   margin-top: 0;
   font-family: "Abril Fatface";
@@ -258,14 +266,17 @@ a:focus {
 }
 
 /* Responsive masthead */
-@media (min-width: 768px) {
-  .masthead-inner {
-    padding: 40px;
-  }
-}
 @media (min-width: 990px) {
   /* Fix the masthead to the side for impact and awesomeness */
+  .masthead .userpic {
+    margin: 20px auto;
+    min-width: 200px;
+    min-height: 200px;
+    float: none
+  }
+
   .masthead {
+    min-height: 550px;
     position: fixed;
     top: 0;
     left: 0;
