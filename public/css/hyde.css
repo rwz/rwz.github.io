@@ -327,6 +327,10 @@ a:focus {
   }
 }
 
+.post img {
+  max-width: 100%
+}
+
 /* Meta data line below post title */
 .post-date {
   display: block;
