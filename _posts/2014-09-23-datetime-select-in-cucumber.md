@@ -50,5 +50,5 @@ end
 So you can use it like this:
 
 {% highlight gherkin %}
-When I fill in "Birthdate" fate field with "25, Aug, 1986"
+When I fill in "Birthdate" date field with "25, Aug, 1986"
 {% endhighlight %}
