@@ -40,7 +40,7 @@ When /^I fill in "(.*?)" date field with "(.*?)"$/ do |field_name, date_componen
   label = find("label", text: field_name)
   select_base_id = label[:for]
   date_components.split(",").each_with_index do |value, index|
-    select value.strip, from: "#{select_base_id}_#{index + 1}i"
+    select value.strip, from: "#{select_base_id}_#{index+1}i"
   end
 end
 {% endhighlight %}
@@ -49,5 +49,5 @@ end
 So you can use it like this:
 
 {% highlight gherkin %}
-When I fill in "Birthdate" fate field with "25, Aug, 1986
+When I fill in "Birthdate" fate field with "25, Aug, 1986"
 {% endhighlight %}
