@@ -26,7 +26,7 @@ There are two problems with this code:
 
   * The label does not actually point to any of the selects. Select ids are
     different from labels for attribute.
-  * There are 3 separate selects for a single database fields that could go in
+  * There are 3 separate selects for a single database field that could go in
     any arbitrary order.
 
 Both problems make these types of fields super inconvenient to access from
