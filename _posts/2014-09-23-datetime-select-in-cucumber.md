@@ -48,5 +48,5 @@ end
 Usage Example:
 
 {% highlight gherkin %}
-When I fill in "Birthdate" date field with "25, Aug, 1986"
+When I fill in "Birthdate" date field with "1986, Aug, 25"
 {% endhighlight %}
