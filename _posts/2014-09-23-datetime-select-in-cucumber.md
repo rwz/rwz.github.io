@@ -3,7 +3,7 @@ layout: post
 title: Datetime select
 ---
 
-Consider this form
+Consider a trivial user registration form with a birthday field
 
 {% highlight haml %}
 = form_for User.new do |form|
@@ -11,7 +11,7 @@ Consider this form
   = form.date_select :birthday
 {% endhighlight %}
 
-This typically generates HTML similar to this:
+It typically generates HTML similar to this:
 
 {% highlight html %}
 <form accept-charset="UTF-8" action="/users" method="post">
@@ -30,11 +30,10 @@ There are two problems with this code:
     any arbitrary order.
 
 Both problems make these types of fields super inconvenient to access from
-capybara/cucumber tests. Your trivial `select "1986/08/25", from: "Birthday"`
-is not gonna work.
+capybara/cucumber tests. Your usual `select "1986/08/25", from: "Birthday"` is
+not gonna work here.
 
-So, I came up with custom step for these kind of things:
-
+Custom cucumber step to the rescue:
 
 {% highlight ruby %}
 When /^I fill in "(.*?)" date field with "(.*?)"$/ do |field_name, date_components|
@@ -46,8 +45,7 @@ When /^I fill in "(.*?)" date field with "(.*?)"$/ do |field_name, date_componen
 end
 {% endhighlight %}
 
-
-So you can use it like this:
+Usage Example:
 
 {% highlight gherkin %}
 When I fill in "Birthdate" date field with "25, Aug, 1986"
